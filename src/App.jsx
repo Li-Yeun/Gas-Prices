@@ -8,7 +8,7 @@ function App() {
   return (
     <div className='app-container'>
     <DigitalClock/>
-    <TankStations/>
+    <div className='super-tank-station-container'><TankStations/></div>
     <Date/>
     </div>
   )

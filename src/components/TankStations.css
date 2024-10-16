@@ -1,61 +1,68 @@
-
-@media only screen and (min-width: 0px) and (max-width: 999px){
-    .tank-stations-container{
-        display: grid;
-        grid-template-rows: repeat(3, 30%);
-        justify-content: center;
-        align-self: center;
-        gap: 50px
+@media only screen and (min-width: 1000px){
+    .super-tank-station-container{
+        grid-row: 3 / span 7;
+        display: flex;
+        flex-direction: row;
     }
 }
+
+
 
 @media only screen and (min-width: 1000px){
-    .tank-stations-container{
-        display: grid;
-        grid-template-columns: repeat(3, 30%);
-        justify-content: center;
-        align-self: center;
-        gap: 50px
+.tank-stations-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+    flex-grow: 1;
     }
 }
 
-.tank-station-container{
-    display: grid;
-    grid-template-rows: 40% 30% 30%;
 
-    border-radius: 30px;
+
+.tank-station-container{
+    display: flex;
+    flex-direction: column;
+    flex: 0;
+    padding: 1em;
+
+    /* border-radius: 30px; */
     box-sizing: border-box;
     border: 1px solid hsla(36, 100%, 98%, 0.68);
     background-color: hsla(36, 83%, 93%, 0.492);
     box-shadow: 10px 10px 10px rgb(255, 231, 231);
-    padding: 20px;
-    box-sizing: border-box;
-
-}
-
-.tank-station-container > img{
-    max-width: 100%;
-    max-height: 100%;
-
+    /* width: auto;
     height: auto;
-    width: auto;
-    
-    /* margin: auto; */
 
-    align-self: flex-end;
-    justify-self: center;
-
-
-
-    display: block;
-
-    /* box-sizing: border-box;
-    border: 1px solid black; */
+    max-width: 100%;
+    max-height: 100%; */
 }
+@media only screen and (min-width: 0) and (max-width: 999px){
+    .tank-station-container{
+        max-width: 90%;
+        margin: auto;
+    }
+}
+
+.tank-station-container > .img-div {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.tank-station-container > .img-div > img {
+    max-width: 100%; /* Ensure the image does not exceed the container's width */
+    max-height: 100%; /* Ensure the image does not exceed the container's height */
+    height: auto; /* Maintain the aspect ratio */
+
+    object-fit: contain; /* Keep the aspect ratio and fit the image inside */
+    overflow: hidden; /* Prevent overflow */
+}
+
 
 .tank-station-container > .price-fluctuation{
-    
 
+    flex-basis: 30%;
     text-align: center;
     font-family:'Tektur';
     font-size: 6rem;
@@ -75,8 +82,10 @@
 }
 
 .price-label-container {
-    align-self: center;
-
+    position: relative;
+    /* top: .5em; */
+    flex-basis: 30%;
+    padding-top: .5em;
     display: flex;
 
     flex-direction: row;

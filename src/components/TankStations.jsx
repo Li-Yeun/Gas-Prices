@@ -1,8 +1,8 @@
 import React from 'react'
 import TankStation from './TankStation'
 
-import AviaLogo from '/avia.png'
-import ShellLogo from '/shell.png'
+import AviaLogo from '/avia2.png'
+import ShellLogo from '/shell2.png'
 import TinQLogo from '/tinQ.png'
 
 import './TankStations.css'

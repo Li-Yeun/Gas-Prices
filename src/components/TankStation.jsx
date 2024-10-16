@@ -16,7 +16,10 @@ function TankStation(props) {
 
   return (
     <div className='tank-station-container'>
-      <img src={props.image} alt="" />
+      {/* <img src={props.image} alt="" />
+      <PriceLabel price={props.current_price}/>
+      {formatFluctuation(props.price_fluctuation)} */}
+      <div className='img-div'><img src={props.image} alt=""/></div>
       <PriceLabel price={props.current_price}/>
       {formatFluctuation(props.price_fluctuation)}
     </div>
